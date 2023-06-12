@@ -21,7 +21,7 @@
                                 </li>
                             </ul>
                             <div class="top_bar_login ml-auto">
-                                <div class="login_button"><a href="#">S'authentifier</a></div>
+                                <div class="login_button"><a href="{{route('login')}}">S'authentifier</a></div>
                             </div>
                         </div>
                     </div>

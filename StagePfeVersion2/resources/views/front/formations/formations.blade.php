@@ -9,23 +9,25 @@
                     <!-- Courses Main Content -->
                     <div class="col-lg-8">
                         <div class="courses_search_container">
-                            <form  action="{{ route('front.recherche.formations') }}" method="GET" id="courses_search_form"
+                            <form action="{{ route('front.recherche.formations') }}" method="GET" id="courses_search_form"
                                 class="courses_search_form d-flex flex-row align-items-center justify-content-start">
-                                    <select class="dropdown_item_select home_search_input" id="categorie" name="categorie">
-                                        <option>Formations Selon Famille</option>
-                                        @foreach ($familles as $famille)
-                                            <option value="{{ $famille->id }}"
-                                                data-marque="{{ $famille->nom }}">{{ $famille->nom }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                    <select class="dropdown_item_select home_search_input" id="souscategorie" name="souscategorie">
-                                        <option>Formation Selon Sous-Famille</option>
-                                        @foreach ($sousfamilles as $sousfamille)
-                                        <option value="{{ $sousfamille->id }}" data-marque="{{ $sousfamille->categorie_id }}"
-                                            style="display:none">{{ $sousfamille->nom }}</option>
-                                        @endforeach
-                                    </select>
+                                <select class="dropdown_item_select home_search_input" id="categorie" name="categorie">
+                                    <option>Formations Selon Famille</option>
+                                    @foreach ($familles as $famille)
+                                        <option value="{{ $famille->id }}" data-marque="{{ $famille->nom }}">
+                                            {{ $famille->nom }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                                <select class="dropdown_item_select home_search_input" id="souscategorie"
+                                    name="souscategorie">
+                                    <option>Formation Selon Sous-Famille</option>
+                                    @foreach ($sousfamilles as $sousfamille)
+                                        <option value="{{ $sousfamille->id }}"
+                                            data-marque="{{ $sousfamille->categorie_id }}" style="display:none">
+                                            {{ $sousfamille->nom }}</option>
+                                    @endforeach
+                                </select>
                                 <button action="submit" class="courses_search_button ml-auto">search now</button>
                             </form>
                         </div>
@@ -36,7 +38,8 @@
                                     @foreach ($formations as $formation)
                                         <div class="col-lg-6 course_col">
                                             <div class="course">
-                                                <div class="course_image"><img src="{{asset('images/course_9.jpg')}}" alt="">
+                                                <div class="course_image"><img src="{{ asset('images/course_9.jpg') }}"
+                                                        alt="">
                                                 </div>
                                                 <div class="course_body">
                                                     <h3 class="course_title"><a
@@ -91,15 +94,16 @@
                                 <div class="sidebar_latest">
                                     <!-- Latest Course -->
                                     @foreach ($formationsrecentes->take(3) as $formationsrecente)
-                                    <div class="latest d-flex flex-row align-items-start justify-content-start">
-                                        <div class="latest_image">
-                                            <div><img src="{{asset('images/latest_1.jpg')}}" alt=""></div>
+                                        <div class="latest d-flex flex-row align-items-start justify-content-start">
+                                            <div class="latest_image">
+                                                <div><img src="{{ asset('images/latest_1.jpg') }}" alt=""></div>
+                                            </div>
+                                            <div class="latest_content">
+                                                <div class="latest_title"><a href="course.html">{{ $formation->titre }}</a>
+                                                </div>
+                                                <div class="latest_price">Free</div>
+                                            </div>
                                         </div>
-                                        <div class="latest_content">
-                                            <div class="latest_title"><a href="course.html">{{$formation->titre}}</a></div>
-                                            <div class="latest_price">Free</div>
-                                        </div>
-                                    </div>
                                     @endforeach
                                 </div>
                             </div>

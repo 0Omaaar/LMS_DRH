@@ -10,6 +10,7 @@ class SousCategorie extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+    // protected $fillable = ['id', 'nom', 'categorie_id'];
 
     public function formations(){
         return $this->hasMany(Formation::class);
