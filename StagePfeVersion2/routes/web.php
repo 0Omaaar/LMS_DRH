@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Back\AdminController;
 use App\Http\Controllers\Back\FamilleController;
 use App\Http\Controllers\Back\FormationController;
+use App\Http\Controllers\Back\ReclamationController;
 use App\Http\Controllers\Back\SousfamilleController;
 use App\Http\Controllers\Front\HomeController;
 
@@ -53,9 +54,23 @@ Route::prefix('admin')->middleware(['auth'])->group(function (){
     Route::get('/familles/delete/{id}', [FamilleController::class, 'delete'])->name('admin.familles.delete');
 
     Route::get('/sousfamilles', [SousfamilleController::class, 'index'])->name('admin.sousfamilles.index');
-    Route::get('/sousfamilles/show/{id}', [SousfamilleController::class, 'show'])->name('admin.sousfamilles.show');
+    // Route::get('/sousfamilles/show/{id}', [SousfamilleController::class, 'show'])->name('admin.sousfamilles.show');
     Route::get('/sousfamilles/create', [SousfamilleController::class, 'create'])->name('admin.sousfamilles.create');
     Route::post('/sousfamilles/store', [SousfamilleController::class, 'store'])->name('admin.sousfamilles.store');
     Route::get('/sousfamilles/delete/{id}', [SousfamilleController::class, 'delete'])->name('admin.sousfamilles.delete');
+
+    
+    Route::get('/reclamations', [ReclamationController::class, 'index'])->name(('admin.reclamations.index'));
+    Route::get('/reclamations/delete/{id}', [ReclamationController::class, 'delete'])->name(('admin.reclamations.delete'));
+    Route::get('/reclamations/{id}/enAttente', [ReclamationController::class, 'enAttente'])->name('admin.reclamations.enAttente');
+    Route::get('/reclamations/{id}/enCoursDeTraitement', [ReclamationController::class, 'enCoursDeTraitement'])->name('admin.reclamations.enCoursDeTraitement');
+    Route::get('/reclamations/{id}/traitee', [ReclamationController::class, 'traitee'])->name('admin.reclamations.traitee');
+
+    // route::get('/dashboard/contacts', [MessageController::class, 'indexContact'])->name('admin.contacts.index');
+    // route::get('/dashboard/contacts/delete/{id}', [MessageController::class, 'destroyContact'])->name('admin.contacts.delete');
+    // route::get('/dashboard/contact/show/{id}', [MessageController::class, 'showContact'])->name('admin.contacts.show');
+    // route::get('/dashboard/contact/Reply/{id}', [MessageController::class, 'Reply'])->name('admin.contacts.reply');
+    // Route::post('/dashboard/contacts/email/{id}', [MessageController::class, 'MailReply'])->name('admin.contacts.email');
+
 
 });
