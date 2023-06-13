@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Back\AdminController;
+use App\Http\Controllers\Back\ContactController;
+use App\Http\Controllers\Back\DemandeController;
 use App\Http\Controllers\Back\FamilleController;
 use App\Http\Controllers\Back\FormationController;
 use App\Http\Controllers\Back\ReclamationController;
@@ -66,11 +68,14 @@ Route::prefix('admin')->middleware(['auth'])->group(function (){
     Route::get('/reclamations/{id}/enCoursDeTraitement', [ReclamationController::class, 'enCoursDeTraitement'])->name('admin.reclamations.enCoursDeTraitement');
     Route::get('/reclamations/{id}/traitee', [ReclamationController::class, 'traitee'])->name('admin.reclamations.traitee');
 
-    // route::get('/dashboard/contacts', [MessageController::class, 'indexContact'])->name('admin.contacts.index');
-    // route::get('/dashboard/contacts/delete/{id}', [MessageController::class, 'destroyContact'])->name('admin.contacts.delete');
-    // route::get('/dashboard/contact/show/{id}', [MessageController::class, 'showContact'])->name('admin.contacts.show');
+    route::get('/contacts', [ContactController::class, 'index'])->name('admin.contacts.index');
+    route::get('/contacts/delete/{id}', [ContactController::class, 'delete'])->name('admin.contacts.delete');
     // route::get('/dashboard/contact/Reply/{id}', [MessageController::class, 'Reply'])->name('admin.contacts.reply');
     // Route::post('/dashboard/contacts/email/{id}', [MessageController::class, 'MailReply'])->name('admin.contacts.email');
 
-
+    Route::get('/demandes', [DemandeController::class, 'index'])->name(('admin.demandes.index'));
+    Route::get('/demandes/delete/{id}', [DemandeController::class, 'delete'])->name(('admin.demandes.delete'));
+    Route::get('/demandes/{id}/enAttente', [DemandeController::class, 'enAttente'])->name('admin.demandes.enAttente');
+    Route::get('/demandes/{id}/enCoursDeTraitement', [DemandeController::class, 'enCoursDeTraitement'])->name('admin.demandes.enCoursDeTraitement');
+    Route::get('/demandes/{id}/traitee', [DemandeController::class, 'traitee'])->name('admin.demandes.traitee');
 });

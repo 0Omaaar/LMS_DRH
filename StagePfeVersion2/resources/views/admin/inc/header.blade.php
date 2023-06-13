@@ -161,13 +161,18 @@
                             <ul class="collapse" id="messagerie" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" href="">
+                                        <a class="sidenav-item-link" href="{{route('admin.contacts.index')}}">
                                             <span class="nav-text">Contacts</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="sidenav-item-link" href="{{route('admin.reclamations.index')}}">
                                             <span class="nav-text">Réclamations</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{route('admin.demandes.index')}}">
+                                            <span class="nav-text">Demandes Formations</span>
                                         </a>
                                     </li>
                                 </div>

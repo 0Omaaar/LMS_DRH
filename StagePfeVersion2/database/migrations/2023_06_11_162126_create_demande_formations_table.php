@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->text('objet');
             $table->text('message');
+            $table->string('statut')->default('En Attente');
             $table->timestamps();
         });
     }
