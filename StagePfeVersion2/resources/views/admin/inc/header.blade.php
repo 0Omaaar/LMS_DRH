@@ -178,11 +178,23 @@
                                 </div>
                             </ul>
                         </li>
-
-                        <li class="section-title">
-                            Pages
+                        <li class="has-sub">
+                            <a class="sidenav-item-link" href="{{ asset('admin/javascript:void(0)') }}"
+                                data-toggle="collapse" data-target="#evenements" aria-expanded="false"
+                                aria-controls="evenements">
+                                <i class="mdi mdi-folder-outline"></i>
+                                <span class="nav-text">Evenements</span> <b class="caret"></b>
+                            </a>
+                            <ul class="collapse" id="evenements" data-parent="#sidebar-menu">
+                                <div class="sub-menu">
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{route('admin.evenements.index')}}">
+                                            <span class="nav-text">Liste des evenements</span>
+                                        </a>
+                                    </li>
+                                </div>
+                            </ul>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -195,7 +207,7 @@
                     <button id="sidebar-toggler" class="sidebar-toggle">
                         <span class="sr-only">Toggle navigation</span>
                     </button>
-                    <span class="page-title">dashboard</span>
+                    <span class="page-title">Tableau De Bord</span>
                     <div class="navbar-right ">
                         <ul class="nav navbar-nav">
                             <!-- User Account -->

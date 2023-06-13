@@ -7,6 +7,7 @@ use App\Models\Categorie;
 use App\Models\Category;
 use App\Models\Contact;
 use App\Models\DemandeFormation;
+use App\Models\Evenement;
 use App\Models\Formation;
 use App\Models\Reclamation;
 use App\Models\SousCategorie;
@@ -20,13 +21,14 @@ class HomeController extends Controller
         $familles = Categorie::all();
         $sousfamilles = SousCategorie::all();
         $formations = Formation::latest()->get();
+        $evenements = Evenement::latest()->get();
 
         //for counter
         $nombre_familles = $familles->count();
         $nombre_sousfamilles = $sousfamilles->count();
         $nombre_formations = $formations->count();
 
-        return view('front.index', compact('familles', 'sousfamilles', 'formations', 'nombre_familles', 'nombre_sousfamilles', 'nombre_formations'));
+        return view('front.index', compact('familles', 'sousfamilles', 'formations', 'nombre_familles', 'nombre_sousfamilles', 'nombre_formations', 'evenements'));
     }
 
     public function formation($id)

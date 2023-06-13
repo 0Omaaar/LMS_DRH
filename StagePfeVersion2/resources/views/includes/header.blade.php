@@ -45,18 +45,9 @@
                             <ul class="main_nav">
                                 <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{route('index')}}">Accueil</a></li>
                                 <li class="{{ Request::is('formations') ? 'active' : '' }}"><a href="{{route('front.formations')}}">Formations</a></li>
-                                <li><a href="">Page</a></li>
                                 <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="{{route('front.contact')}}">Contact</a></li>
                                 <li class="{{ Request::is('reclamation') ? 'active' : '' }}"><a href="{{route('front.reclamation')}}">Réclamation</a></li>
                             </ul>
-                            <div class="search_button"><i class="fa fa-search" aria-hidden="true"></i></div>
-
-                            <!-- Hamburger -->
-
-                            <div class="shopping_cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
-                            <div class="hamburger menu_mm">
-                                <i class="fa fa-bars menu_mm" aria-hidden="true"></i>
-                            </div>
                         </nav>
 
                     </div>

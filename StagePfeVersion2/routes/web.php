@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Back\AdminController;
 use App\Http\Controllers\Back\ContactController;
 use App\Http\Controllers\Back\DemandeController;
+use App\Http\Controllers\Back\EvenementController;
 use App\Http\Controllers\Back\FamilleController;
 use App\Http\Controllers\Back\FormationController;
 use App\Http\Controllers\Back\ReclamationController;
@@ -78,4 +79,9 @@ Route::prefix('admin')->middleware(['auth'])->group(function (){
     Route::get('/demandes/{id}/enAttente', [DemandeController::class, 'enAttente'])->name('admin.demandes.enAttente');
     Route::get('/demandes/{id}/enCoursDeTraitement', [DemandeController::class, 'enCoursDeTraitement'])->name('admin.demandes.enCoursDeTraitement');
     Route::get('/demandes/{id}/traitee', [DemandeController::class, 'traitee'])->name('admin.demandes.traitee');
+
+    Route::get('/evenements', [EvenementController::class, 'index'])->name('admin.evenements.index');
+    Route::get('/evenements/create', [EvenementController::class, 'create'])->name('admin.evenements.create');
+    Route::post('/evenements/store', [EvenementController::class, 'store'])->name('admin.evenements.store');
+    Route::get('/evenements/delete/{id}', [EvenementController::class, 'delete'])->name('admin.evenements.delete');
 });
