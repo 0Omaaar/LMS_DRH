@@ -14,7 +14,7 @@
                 @foreach ($formations->take(3) as $formation)
                 <div class="col-lg-4 course_col">
                     <div class="course">
-                        <div class="course_image"><img src="images/course_1.jpg" alt=""></div>
+                        <div class="course_image"><img src="{{asset('img/imgann/'.$formation->image)}}" alt=""></div>
                         <div class="course_body">
                             <h3 class="course_title"><a href="{{route('front.formation', $formation->id)}}">{{$formation->titre}}</a></h3>
                             <div class="course_teacher">{{$formation->souscategorie->nom}}</div>
@@ -28,7 +28,7 @@
                                     <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                                     <span>Publié le : {{ \Carbon\Carbon::parse($formation->created_at)->format('d-m-Y') }}</span>
                                 </div>
-                                <div class="course_price ml-auto"><i class="fa fa-eye"></i> 50</div>
+                                <div class="course_price ml-auto"><i class="fa fa-eye"></i> {{$formation->vues}}</div>
                             </div>
                         </div>
                     </div>

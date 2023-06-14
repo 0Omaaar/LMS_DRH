@@ -141,12 +141,12 @@
                                     <div class="feature d-flex flex-row align-items-center justify-content-start">
                                         <div class="feature_title"><i class="fa fa-users"
                                                 aria-hidden="true"></i><span>Nombre de vues:</span></div>
-                                        <div class="feature_text ml-auto">35</div>
+                                        <div class="feature_text ml-auto">{{$formation->vues}}</div>
                                     </div>
                                     <div class="feature d-flex flex-row align-items-center justify-content-start">
                                         <div class="feature_title"><i class="fa fa-users"
                                                 aria-hidden="true"></i><span>Nombre de videos:</span></div>
-                                        <div class="feature_text ml-auto">35</div>
+                                        <div class="feature_text ml-auto">{{$formation->videos->count()}}</div>
                                     </div>
                                     <div class="feature d-flex flex-row align-items-center justify-content-start">
                                         <div class="feature_title"><i class="fa fa-users"

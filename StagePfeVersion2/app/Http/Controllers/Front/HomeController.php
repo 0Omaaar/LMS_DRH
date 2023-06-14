@@ -11,6 +11,7 @@ use App\Models\Evenement;
 use App\Models\Formation;
 use App\Models\Reclamation;
 use App\Models\SousCategorie;
+use App\Models\VueFormation;
 use Illuminate\Http\Request;
 use Alert;
 
@@ -31,13 +32,29 @@ class HomeController extends Controller
         return view('front.index', compact('familles', 'sousfamilles', 'formations', 'nombre_familles', 'nombre_sousfamilles', 'nombre_formations', 'evenements'));
     }
 
-    public function formation($id)
+    public function formation(Request $request, $id)
     {
 
         $formation = Formation::findOrFail($id);
         $link = $formation->youtube_url;
         $formations = Formation::latest()->get();
         $video_url = str_replace("https://youtu.be/", "https://www.youtube.com/embed/", $link);
+
+
+        // Vérifier si une vue existe déjà pour cette adresse IP et cette formation
+        $adresseIP = $request->ip();
+        $vueExistante = VueFormation::where('formation_id', $id)
+            ->where('ip_address', $adresseIP)
+            ->first();
+
+        // Si aucune vue n'existe, incrémenter le compteur de vues et enregistrer la vue
+        if (!$vueExistante) {
+            Formation::where('id', $id)->increment('vues');
+            VueFormation::create([
+                'formation_id' => $id,
+                'ip_address' => $adresseIP,
+            ]);
+        }
 
         return view('front.formations.formation', compact('formation', 'video_url', 'formations'));
     }

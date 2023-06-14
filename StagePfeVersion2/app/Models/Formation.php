@@ -18,4 +18,8 @@ class Formation extends Model
     {
         return $this->hasMany(Video::class);
     }
+
+    public function vues(){
+        return $this->hasMany(VueFormation::class, 'formation_id');
+    }
 }

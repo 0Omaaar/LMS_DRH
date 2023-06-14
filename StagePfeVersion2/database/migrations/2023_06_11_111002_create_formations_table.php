@@ -21,6 +21,7 @@ return new class extends Migration
             $table->foreign('souscategorie_id')->references('id')->on('sous_categories')->onDelete('cascade');
             $table->string('youtube_url')->nullable();
             $table->string('pdf_chemin')->nullable();
+            $table->integer('vues')->default('0');
             $table->timestamps();
         });
     }

@@ -2,7 +2,6 @@
 @section('title', 'Page de formations')
 @section('content')
 
-    @if ($formations && $formations->count() > 0)
         <div class="courses mt-4">
             <div class="container mt-4">
                 <div class="row">
@@ -11,7 +10,7 @@
                         <div class="courses_search_container">
                             <form action="{{ route('front.recherche.formations') }}" method="GET" id="courses_search_form"
                                 class="courses_search_form d-flex flex-row align-items-center justify-content-start">
-                                <select class="dropdown_item_select home_search_input" id="categorie" name="categorie">
+                                <select class="dropdown_item_select home_search_input form-select" id="categorie" name="categorie">
                                     <option>Formations Selon Famille</option>
                                     @foreach ($familles as $famille)
                                         <option value="{{ $famille->id }}" data-marque="{{ $famille->nom }}">
@@ -19,7 +18,7 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <select class="dropdown_item_select home_search_input" id="souscategorie"
+                                <select class="dropdown_item_select home_search_input ml-4 form-select" id="souscategorie"
                                     name="souscategorie">
                                     <option>Formation Selon Sous-Famille</option>
                                     @foreach ($sousfamilles as $sousfamille)
@@ -28,7 +27,7 @@
                                             {{ $sousfamille->nom }}</option>
                                     @endforeach
                                 </select>
-                                <button action="submit" class="courses_search_button ml-auto">search now</button>
+                                <button action="submit" class="courses_search_button ml-auto">Chercher</button>
                             </form>
                         </div>
                         <div class="courses_container">
@@ -38,12 +37,12 @@
                                     @foreach ($formations as $formation)
                                         <div class="col-lg-6 course_col">
                                             <div class="course">
-                                                <div class="course_image"><img src="{{ asset('images/course_9.jpg') }}"
+                                                <div class="course_image"><img src="{{ asset('img/imgann/'.$formation->image) }}"
                                                         alt="">
                                                 </div>
                                                 <div class="course_body">
                                                     <h3 class="course_title"><a
-                                                            href="course.html">{{ $formation->titre }}</a></h3>
+                                                            href="{{route('front.formation', $formation->id)}}">{{ $formation->titre }}</a></h3>
                                                     <div class="course_teacher">{{ $formation->souscategorie->nom }}</div>
                                                     <div class="course_text">
                                                         <p>{{ $formation->description }}</p>
@@ -57,7 +56,7 @@
                                                             <span>Publié le :
                                                                 {{ \Carbon\Carbon::parse($formation->created_at)->format('d-m-Y') }}</span>
                                                         </div>
-                                                        <div class="course_price ml-auto"><i class="fa fa-eye"></i> 50</div>
+                                                        <div class="course_price ml-auto"><i class="fa fa-eye"></i> {{$formation->vues}}</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -96,10 +95,10 @@
                                     @foreach ($formationsrecentes->take(3) as $formationsrecente)
                                         <div class="latest d-flex flex-row align-items-start justify-content-start">
                                             <div class="latest_image">
-                                                <div><img src="{{ asset('images/latest_1.jpg') }}" alt=""></div>
+                                                <div><img src="{{ asset('img/imgann/'.$formationsrecente->image) }}" alt=""></div>
                                             </div>
                                             <div class="latest_content">
-                                                <div class="latest_title"><a href="course.html">{{ $formation->titre }}</a>
+                                                <div class="latest_title"><a href="{{route('front.formation', $formationsrecente->id)}}">{{ $formationsrecente->titre }}</a>
                                                 </div>
                                                 <div class="latest_price">Free</div>
                                             </div>
@@ -126,6 +125,5 @@
                 </div>
             </div>
         </div>
-    @else
-    @endif
+
 @endsection
