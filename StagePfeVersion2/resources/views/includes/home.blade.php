@@ -14,7 +14,7 @@
                         <div class="row">
                             <div class="col text-center">
                                 <div class="home_slider_title">Plateforme De Formation Des Cadres</div>
-                                <div class="home_slider_subtitle">Future Of Education Technology</div>
+                                <div class="home_slider_subtitle">Formations En Ligne !</div>
                                 <div class="home_slider_form_container">
                                     <form action="{{ route('front.recherche') }}" method="GET" id="home_search_form_1"
                                         class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">

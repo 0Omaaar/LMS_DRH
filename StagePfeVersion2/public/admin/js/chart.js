@@ -291,6 +291,128 @@ if (splinaArea3 !== null) {
   randerSplinaArea3.render();
 }
 
+
+
+//
+var splinaArea9 = document.querySelector("#spline-area-9");
+if (splinaArea9 !== null) {
+  var splinaAreaOptions9 = {
+    chart: {
+      id: "spline-area-9",
+      group: "social",
+      height: 135,
+      width: "100%",
+      background: "#9e9de0",
+      type: "area",
+      sparkline: {
+        enabled: true,
+      },
+    },
+    yaxis: {
+      labels: {
+        minWidth: 40,
+      },
+    },
+    stroke: {
+      width: 2,
+    },
+    colors: ["#ffffff"],
+    fill: {
+      type: "gradient",
+      gradient: {
+        shadeIntensity: 1,
+        opacityFrom: 0.7,
+        opacityTo: 0.3,
+        stops: [0, 90, 100],
+      },
+    },
+    tooltip: {
+      followCursor: false,
+      theme: "dark",
+      x: {
+        show: false,
+      },
+      marker: {
+        show: false,
+      },
+      y: {
+        title: {
+          formatter: function () {
+            return "";
+          },
+        },
+      },
+    },
+
+    series: [
+      {
+        data: [0, 8, 20, 14, 17, 12, 14, 8, 5],
+      },
+    ],
+  };
+  var randerSplinaArea9 = new ApexCharts(splinaArea9, splinaAreaOptions9);
+  randerSplinaArea9.render();
+}
+//
+var splinaArea99 = document.querySelector("#spline-area-99");
+if (splinaArea99 !== null) {
+  var splinaAreaOptions99 = {
+    chart: {
+      id: "spline-area-99",
+      group: "social",
+      height: 135,
+      width: "100%",
+      background: "#9e3de0",
+      type: "area",
+      sparkline: {
+        enabled: true,
+      },
+    },
+    yaxis: {
+      labels: {
+        minWidth: 40,
+      },
+    },
+    stroke: {
+      width: 2,
+    },
+    colors: ["#ffffff"],
+    fill: {
+      type: "gradient",
+      gradient: {
+        shadeIntensity: 1,
+        opacityFrom: 0.7,
+        opacityTo: 0.3,
+        stops: [0, 90, 100],
+      },
+    },
+    tooltip: {
+      followCursor: false,
+      theme: "dark",
+      x: {
+        show: false,
+      },
+      marker: {
+        show: false,
+      },
+      y: {
+        title: {
+          formatter: function () {
+            return "";
+          },
+        },
+      },
+    },
+
+    series: [
+      {
+        data: [0, 8, 20, 14, 17, 12, 14, 8, 5],
+      },
+    ],
+  };
+  var randerSplinaArea99 = new ApexCharts(splinaArea99, splinaAreaOptions99);
+  randerSplinaArea99.render();
+}
 // /*======== 4. SPLINA AREA CHART 04 ========*/
 var splinaArea4 = document.querySelector("#spline-area-4");
 if (splinaArea4 !== null) {

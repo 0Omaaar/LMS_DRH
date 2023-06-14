@@ -13,11 +13,11 @@
                                 <li><div class="question">Avez-vous des questions ?</div></li>
                                 <li>
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <div>001-1234-88888</div>
+                                    <div>0537778867</div>
                                 </li>
                                 <li>
                                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                    <div>info.deercreative@gmail.com</div>
+                                    <div>masirh_sup@yahoo.fr</div>
                                 </li>
                             </ul>
                             <div class="top_bar_login ml-auto">

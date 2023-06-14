@@ -7,10 +7,10 @@
     <form action="{{route('admin.sousfamilles.store')}}" method="post">
         @csrf
         <div class="form-group">
-            <label for="">Nom de la sous categorie</label>
+            <label for="">Nom de la sous famille</label>
             <input type="text" name="nom" class="form-control">
-            <label for="">Categorie</label>
-            <select name="categorie_id" id="categorie_id">
+            <label for="" class="mt-2">Famille</label>
+            <select name="categorie_id" id="categorie_id" class="form-control mt-4">
                 <option value=""></option>
                 @foreach ($categories as $categorie)
                     <option value="{{$categorie->id}}">{{$categorie->nom}}</option>

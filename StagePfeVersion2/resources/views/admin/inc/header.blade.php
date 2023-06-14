@@ -54,7 +54,7 @@
             <div id="sidebar" class="sidebar sidebar-with-footer">
                 <!-- Aplication Brand -->
                 <div class="app-brand">
-                    <a href="">
+                    <a href="{{route('admin.index')}}">
                         <span class="brand-name">OpenFormations</span>
                     </a>
                 </div>
@@ -63,8 +63,8 @@
                     <!-- sidebar menu -->
                     <ul class="nav sidebar-inner" id="sidebar-menu">
 
-                        <li class="active">
-                            <a class="sidenav-item-link" href="">
+                        <li class="">
+                            <a class="sidenav-item-link" href="{{route('admin.index')}}">
                                 <i class="mdi mdi-briefcase-account-outline"></i>
                                 <span class="nav-text">Tableau de bord</span>
                             </a>

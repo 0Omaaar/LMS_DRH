@@ -6,8 +6,11 @@
                     <h2 class="section_title">Evènements à venir
                     </h2>
                     <div class="section_subtitle">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum
-                            feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p>
+                        <p>Découvrez les événements passionnants à venir ! Notre plateforme offre une expérience
+                            d'apprentissage en ligne dynamique et enrichissante. Consultez notre calendrier pour des
+                            conférences inspirantes, des ateliers interactifs et des webinaires informatifs. Ne manquez
+                            pas ces opportunités stimulantes pour élargir vos connaissances, développer de nouvelles
+                            compétences et rencontrer des experts renommés. /p>
                     </div>
                 </div>
             </div>
@@ -46,7 +49,7 @@
                     </div>
                 @endforeach
             @else
-            <h4>Aucun evènement n'est disponible.</h4>
+                <h4>Aucun evènement n'est disponible.</h4>
             @endif
         </div>
     </div>
