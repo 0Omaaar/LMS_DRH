@@ -31,9 +31,6 @@
                     <div class="card card-default mb-0">
                         <div class="card-header pb-0">
                             <div class="app-brand w-100 d-flex justify-content-center border-bottom-0">
-                                <a class="w-auto pl-0" href="">
-                                    <img src="{{ asset('img/logo.png') }}" width="200px">
-                                </a>
                             </div>
                         </div>
                         <div class="card-body px-5 pb-5 pt-0">

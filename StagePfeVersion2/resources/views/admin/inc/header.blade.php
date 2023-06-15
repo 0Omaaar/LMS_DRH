@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>OpenFormations</title>
+    <title>EFormations</title>
     <meta name="theme-name" content="mono" />
     <!-- GOOGLE FONTS -->
     <link href="{{ asset('admin/https://fonts.googleapis.com/css?family=Karla:400,700|Roboto') }}" rel="stylesheet">
@@ -54,8 +54,8 @@
             <div id="sidebar" class="sidebar sidebar-with-footer">
                 <!-- Aplication Brand -->
                 <div class="app-brand">
-                    <a href="{{route('admin.index')}}">
-                        <span class="brand-name">OpenFormations</span>
+                    <a href="{{ route('admin.index') }}">
+                        <span class="brand-name">EFormations</span>
                     </a>
                 </div>
                 <!-- begin sidebar scrollbar -->
@@ -64,25 +64,18 @@
                     <ul class="nav sidebar-inner" id="sidebar-menu">
 
                         <li class="">
-                            <a class="sidenav-item-link" href="{{route('admin.index')}}">
+                            <a class="sidenav-item-link" href="{{ route('admin.index') }}">
                                 <i class="mdi mdi-briefcase-account-outline"></i>
                                 <span class="nav-text">Tableau de bord</span>
                             </a>
                         </li>
 
-                        <li>
-                            <a class="sidenav-item-link">
-                                <i class="mdi mdi-chart-line"></i>
-                                <span class="nav-text">Analytics Dashboard</span>
-                            </a>
-                        </li>
+
+
+
 
                         <li class="section-title">
-                            Apps
-                        </li>
-
-                        <li class="section-title">
-                            UI Elements
+                            GESTION
                         </li>
 
                         <li class="has-sub">
@@ -95,7 +88,7 @@
                             <ul class="collapse" id="formations" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" href="{{route('admin.formations')}}">
+                                        <a class="sidenav-item-link" href="{{ route('admin.formations') }}">
                                             <span class="nav-text">Liste des formations</span>
                                         </a>
                                     </li>
@@ -117,7 +110,7 @@
                             <ul class="collapse" id="familles" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" href="{{route('admin.familles.index')}}">
+                                        <a class="sidenav-item-link" href="{{ route('admin.familles.index') }}">
                                             <span class="nav-text">Liste des familles</span>
                                         </a>
                                     </li>
@@ -139,7 +132,7 @@
                             <ul class="collapse" id="sousfamilles" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" href="{{route('admin.sousfamilles.index')}}">
+                                        <a class="sidenav-item-link" href="{{ route('admin.sousfamilles.index') }}">
                                             <span class="nav-text">Liste des sous familles</span>
                                         </a>
                                     </li>
@@ -161,17 +154,17 @@
                             <ul class="collapse" id="messagerie" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" href="{{route('admin.contacts.index')}}">
+                                        <a class="sidenav-item-link" href="{{ route('admin.contacts.index') }}">
                                             <span class="nav-text">Contacts</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="sidenav-item-link" href="{{route('admin.reclamations.index')}}">
+                                        <a class="sidenav-item-link" href="{{ route('admin.reclamations.index') }}">
                                             <span class="nav-text">Réclamations</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="sidenav-item-link" href="{{route('admin.demandes.index')}}">
+                                        <a class="sidenav-item-link" href="{{ route('admin.demandes.index') }}">
                                             <span class="nav-text">Demandes Formations</span>
                                         </a>
                                     </li>
@@ -188,7 +181,7 @@
                             <ul class="collapse" id="evenements" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" href="{{route('admin.evenements.index')}}">
+                                        <a class="sidenav-item-link" href="{{ route('admin.evenements.index') }}">
                                             <span class="nav-text">Liste des evenements</span>
                                         </a>
                                     </li>
