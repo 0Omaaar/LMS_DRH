@@ -10,6 +10,7 @@ use App\Models\DemandeFormation;
 use App\Models\Evenement;
 use App\Models\Formation;
 use App\Models\Reclamation;
+use App\Models\Signal;
 use App\Models\SousCategorie;
 use App\Models\VueFormation;
 use Illuminate\Http\Request;
@@ -206,5 +207,24 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
+    //Signal
+    public function signal(Request $request, $id){
+        $formation = Formation::findOrFail($id);
+        $validated = $request->validate([
+            'raison' => 'required|max:150',
+        ]);
+        $signal = new Signal();
+        $signal->formation_id = $formation->id;
+        $signal->raison = $validated['raison'];
+        $signal->save();
+
+        $formation->increment('signals');
+        $formation->save();
+        
+
+        \RealRashid\SweetAlert\Facades\Alert::success('Merci', 'Votre signal a été reçu avec succès. Notre équipe s\'en occupera dès que possible.');
+
+        return redirect()->back();
+    }
 
 }

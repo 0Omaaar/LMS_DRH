@@ -30,6 +30,7 @@ Route::get('/formations', [HomeController::class, 'formations'])->name('front.fo
 Route::get('/formations/{id}', [HomeController::class, 'formationsFamille'])->name('front.formations.famille');
 Route::post('/demandeFormation', [HomeController::class, 'demandeFormation'])->name('front.demandeFormation');
 Route::get('/formation/{id}', [HomeController::class, 'formation'])->name('front.formation');
+Route::post('/formation/{id}/signal', [HomeController::class, 'signal'])->name('front.signal');
 Route::get('/contact', [HomeController::class, 'contact'])->name('front.contact');
 Route::post('/contact/submit', [HomeController::class, 'contactSubmit'])->name('front.contact.submit');
 Route::get('/reclamation', [HomeController::class, 'reclamation'])->name('front.reclamation');

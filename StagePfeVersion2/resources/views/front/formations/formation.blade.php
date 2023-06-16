@@ -1,6 +1,8 @@
 @extends('base')
 @section('title', 'Page de formation')
 @section('content')
+@include('sweetalert::alert')
+
     <div class="course mt-5">
         <div class="container mt-5">
             <div class="row">
@@ -53,19 +55,22 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body">
-                                        Êtes-vous sûr de vouloir signaler cette formation ? Veuillez confirmer en répondant
-                                        par "Signaler" et la Raison si vous souhaitez procéder au signalement, ou par "Fermer" si vous préférez
-                                        annuler l'action.
-                                        <form action="" method="POST">
+                                    <form action="{{route('front.signal', $formation->id)}}" method="POST">
+                                        @csrf
+                                        <div class="modal-body">
+                                            Êtes-vous sûr de vouloir signaler cette formation ? Veuillez confirmer en
+                                            répondant
+                                            par "Signaler" et la Raison si vous souhaitez procéder au signalement, ou par
+                                            "Fermer" si vous préférez
+                                            annuler l'action.
                                             <input class="form-control mt-4" name="raison" placeholder="Votre Raison..">
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Fermer</button>
-                                        <button type="button" class="btn btn-primary">Signaler</button>
-                                    </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Fermer</button>
+                                            <button type="submit" class="tab active">Signaler</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
