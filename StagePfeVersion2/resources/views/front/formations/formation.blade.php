@@ -30,7 +30,44 @@
                                         href="#">{{ \Carbon\Carbon::parse($formation->created_at)->format('d-m-Y') }}</a>
                                 </div>
                             </div>
+                            <div class="dropdown">
 
+                                <a class="dropdown-toggle icon-burger-mini" href="#" role="button"
+                                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#" data-toggle="modal"
+                                        data-target="#exampleModal">Signaler</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">SIGNAL</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Êtes-vous sûr de vouloir signaler cette formation ? Veuillez confirmer en répondant
+                                        par "Signaler" et la Raison si vous souhaitez procéder au signalement, ou par "Fermer" si vous préférez
+                                        annuler l'action.
+                                        <form action="" method="POST">
+                                            <input class="form-control mt-4" name="raison" placeholder="Votre Raison..">
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Fermer</button>
+                                        <button type="button" class="btn btn-primary">Signaler</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Course Image -->
@@ -104,8 +141,8 @@
                                     @if ($formation->pdf_chemin)
                                         <div class="content_wrapper py-5">
                                             <div class="form-group mt-3">
-                                                <a href="{{ asset('pdf/' . $formation->pdf_chemin) }}" class="courses_button_pdf"
-                                                    download>
+                                                <a href="{{ asset('pdf/' . $formation->pdf_chemin) }}"
+                                                    class="courses_button_pdf" download>
                                                     {{-- <i class="fa fa-file-pdf"></i> --}}
                                                     Télécharger PDF
                                                 </a>
@@ -141,12 +178,12 @@
                                     <div class="feature d-flex flex-row align-items-center justify-content-start">
                                         <div class="feature_title"><i class="fa fa-users"
                                                 aria-hidden="true"></i><span>Nombre de vues:</span></div>
-                                        <div class="feature_text ml-auto">{{$formation->vues}}</div>
+                                        <div class="feature_text ml-auto">{{ $formation->vues }}</div>
                                     </div>
                                     <div class="feature d-flex flex-row align-items-center justify-content-start">
                                         <div class="feature_title"><i class="fa fa-users"
                                                 aria-hidden="true"></i><span>Nombre de videos:</span></div>
-                                        <div class="feature_text ml-auto">{{$formation->videos->count()}}</div>
+                                        <div class="feature_text ml-auto">{{ $formation->videos->count() }}</div>
                                     </div>
                                     <div class="feature d-flex flex-row align-items-center justify-content-start">
                                         <div class="feature_title"><i class="fa fa-users"
@@ -165,15 +202,17 @@
 
                                 <!-- Latest Course -->
                                 @foreach ($formations->take(3) as $formation)
-                                <div class="latest d-flex flex-row align-items-start justify-content-start">
-                                    <div class="latest_image">
-                                        {{-- <div><img src="images/latest_1.jpg" alt=""></div> --}}
+                                    <div class="latest d-flex flex-row align-items-start justify-content-start">
+                                        <div class="latest_image">
+                                            {{-- <div><img src="images/latest_1.jpg" alt=""></div> --}}
+                                        </div>
+                                        <div class="latest_content">
+                                            <div class="latest_title"><a
+                                                    href="{{ route('front.formation', $formation->id) }}">{{ $formation->titre }}</a>
+                                            </div>
+                                            <div class="latest_price">{{ $formation->souscategorie->nom }}</div>
+                                        </div>
                                     </div>
-                                    <div class="latest_content">
-                                        <div class="latest_title"><a href="{{route('front.formation', $formation->id)}}">{{$formation->titre}}</a></div>
-                                        <div class="latest_price">{{$formation->souscategorie->nom}}</div>
-                                    </div>  
-                                </div>
                                 @endforeach
                             </div>
                         </div>

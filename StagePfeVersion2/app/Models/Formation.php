@@ -22,4 +22,11 @@ class Formation extends Model
     public function vues(){
         return $this->hasMany(VueFormation::class, 'formation_id');
     }
+
+    public function signals(){
+        return $this->hasMany(Signal::class);
+    }
+
+
+
 }

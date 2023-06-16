@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('youtube_url')->nullable();
             $table->string('pdf_chemin')->nullable();
             $table->integer('vues')->default('0');
+            $table->integer('signals')->default('0');
             $table->timestamps();
         });
     }
