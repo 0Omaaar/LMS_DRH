@@ -93,8 +93,8 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="sidenav-item-link" href="">
-                                            <span class="nav-text">dd</span>
+                                        <a class="sidenav-item-link" href="{{route('admin.formationsSig.index')}}">
+                                            <span class="nav-text">Formations Signalées</span>
                                         </a>
                                     </li>
                                 </div>

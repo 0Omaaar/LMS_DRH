@@ -192,6 +192,32 @@
                     </div>
                 </div>
             </div>
+            <div class="col-xl-4 col-sm-6">
+                <div class="card card-default card-mini">
+                    <div class="card-header">
+                        <h2>{{ $evenements->count() }}</h2>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle icon-burger-mini" href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="{{ route('admin.formationsSig.index') }}">Voir Plus</a>
+                            </div>
+                        </div>
+                        <div class="sub-title">
+                            <span class="mr-1">Nombre de formations signalées</span>
+                            <i class="mdi mdi-arrow-up-bold text-success"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-wrapper">
+                            <div>
+                                <div id="spline-area-99"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
         <hr>

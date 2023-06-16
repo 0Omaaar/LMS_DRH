@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('formation_id');
             $table->foreign('formation_id')->references('id')->on('formations')->onDelete('cascade')->onUpdate('cascade');
             $table->string('raison');
-            $table->string('statut')->default('Non Traité');
+            $table->string('statut')->default('Non Traitée');
             $table->timestamps();
         });
     }

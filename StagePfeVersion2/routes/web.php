@@ -8,6 +8,7 @@ use App\Http\Controllers\Back\EvenementController;
 use App\Http\Controllers\Back\FamilleController;
 use App\Http\Controllers\Back\FormationController;
 use App\Http\Controllers\Back\ReclamationController;
+use App\Http\Controllers\Back\SignalController;
 use App\Http\Controllers\Back\SousfamilleController;
 use App\Http\Controllers\Front\HomeController;
 
@@ -85,4 +86,9 @@ Route::prefix('admin')->middleware(['auth'])->group(function (){
     Route::get('/evenements/create', [EvenementController::class, 'create'])->name('admin.evenements.create');
     Route::post('/evenements/store', [EvenementController::class, 'store'])->name('admin.evenements.store');
     Route::get('/evenements/delete/{id}', [EvenementController::class, 'delete'])->name('admin.evenements.delete');
+
+    Route::get('/formationsSig', [SignalController::class, 'index'])->name('admin.formationsSig.index');
+    Route::get('/formationsSig/{id}/traitee', [SignalController::class, 'traitee'])->name('admin.formationsSig.traitee');
+    Route::get('/formationsSig/{id}/nontraitee', [SignalController::class, 'nontraitee'])->name('admin.formationsSig.nontraitee');
+
 });
