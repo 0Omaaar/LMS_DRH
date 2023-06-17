@@ -19,7 +19,8 @@
                                     <form action="{{ route('front.recherche') }}" method="GET" id="home_search_form_1"
                                         class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
                                         <div class="d-flex flex-row align-items-center justify-content-start">
-                                            <select class="dropdown_item_select home_search_input" id="categorie" name="categorie">
+                                            <select class="dropdown_item_select home_search_input nice-select" id="categorie" name="categorie">
+                                            {{-- <select class="nice-select" id="categorie" name="categorie"> --}}
                                                 <option>Formations Selon Famille</option>
                                                 @foreach ($familles as $famille)
                                                     <option value="{{ $famille->id }}"
@@ -35,7 +36,7 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                        <button type="submit" class="home_search_button">search</button>
+                                        <button type="submit" class="home_search_button">Chercher</button>
                                     </form>
                                 </div>
                             </div>

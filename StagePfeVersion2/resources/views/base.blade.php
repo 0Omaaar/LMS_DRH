@@ -45,6 +45,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/responsive.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('styles/course.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('styles/course_responsive.css')}}">
+    <link rel="stylesheet" href="{{asset('styles/nice.css')}}">
     @endif
     
 </head>

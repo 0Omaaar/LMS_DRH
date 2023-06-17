@@ -19,6 +19,7 @@
                                     @endforeach
                                 </select>
                                 <select class="dropdown_item_select home_search_input ml-4 form-select" id="souscategorie"
+                                {{-- <select class="nice-select" id="souscategorie" --}}
                                     name="souscategorie">
                                     <option>Formation Selon Sous-Famille</option>
                                     @foreach ($sousfamilles as $sousfamille)

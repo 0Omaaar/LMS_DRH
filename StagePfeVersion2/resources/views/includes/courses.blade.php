@@ -14,7 +14,7 @@
                 @foreach ($formations->take(3) as $formation)
                 <div class="col-lg-4 course_col">
                     <div class="course">
-                        <div class="course_image"><img src="{{asset('img/imgann/'.$formation->image)}}" alt=""></div>
+                        <div class="course_image"><a href="{{route('front.formation', $formation->id)}}"><img src="{{asset('img/imgann/'.$formation->image)}}"></a></div>
                         <div class="course_body">
                             <h3 class="course_title"><a href="{{route('front.formation', $formation->id)}}">{{$formation->titre}}</a></h3>
                             <div class="course_teacher">{{$formation->souscategorie->nom}}</div>

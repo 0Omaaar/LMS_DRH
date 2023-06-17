@@ -37,22 +37,22 @@
                             </td>
                             <td>{{ $demande->created_at }}</td>
                                 <td>
-                                    <a  class="btn btn-info btn-sm" data-toggle="modal" data-target="#exampleModal{{$demande->id}}">
+                                    <a  href="#" style="color: black; font-size: 30px; margin-left: 2px;" data-toggle="modal" data-target="#exampleModal{{$demande->id}}">
                                         <span class="mdi mdi-message"></span>
                                     </a>
-                                    <a class="btn btn btn-danger btn-sm"
+                                    <a style="color: red; font-size: 30px; margin-left: 2px;"
                                         href="{{ route('admin.demandes.delete', $demande->id) }}"><span
                                             class="mdi mdi-delete-circle"></span>
                                     </a>
-                                    <a class="btn btn btn-info btn-sm"
+                                    <a style="color: blue; font-size: 30px; margin-left: 2px;"
                                         href="{{ route('admin.demandes.enAttente', $demande->id) }}"><span
-                                            class="mdi mdi-delete-circle"></span>
+                                            class="mdi mdi-information"></span>
                                     </a>
-                                    <a class="btn btn btn-dark btn-sm"
+                                    <a style="color: grey; font-size: 30px; margin-left: 2px;"
                                         href="{{ route('admin.demandes.enCoursDeTraitement', $demande->id) }}"><span
                                             class="mdi mdi-blender"></span>
                                     </a>
-                                    <a class="btn btn btn-success btn-sm"
+                                    <a style="color: green; font-size: 30px; margin-left: 2px;"
                                         href="{{ route('admin.demandes.traitee', $demande->id) }}"><span
                                             class="mdi mdi-check-outline"></span>
                                     </a>

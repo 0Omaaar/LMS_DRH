@@ -34,19 +34,19 @@
                             <td>{{ $reclamation->created_at }}</td>
                             <div>
                                 <td>
-                                    <a class="btn btn btn-danger btn-sm"
+                                    <a style="color: red; font-size: 30px; margin-left: 2px;"
                                         href="{{ route('admin.reclamations.delete', $reclamation->id) }}"><span
                                             class="mdi mdi-delete-circle"></span>
                                     </a>
-                                    <a class="btn btn btn-info btn-sm"
+                                    <a style="color: blue; font-size: 30px; margin-left: 2px;"
                                         href="{{ route('admin.reclamations.enAttente', $reclamation->id) }}"><span
-                                            class="mdi mdi-delete-circle"></span>
+                                            class="mdi mdi-information"></span>
                                     </a>
-                                    <a class="btn btn btn-dark btn-sm"
+                                    <a style="color: grey; font-size: 30px; margin-left: 2px;"
                                         href="{{ route('admin.reclamations.enCoursDeTraitement', $reclamation->id) }}"><span
                                             class="mdi mdi-blender"></span>
                                     </a>
-                                    <a class="btn btn btn-success btn-sm"
+                                    <a style="color: green; font-size: 30px; margin-left: 2px;"
                                         href="{{ route('admin.reclamations.traitee', $reclamation->id) }}"><span
                                             class="mdi mdi-check-outline"></span>
                                     </a>
