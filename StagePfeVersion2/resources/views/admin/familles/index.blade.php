@@ -1,15 +1,15 @@
 @extends('admin.base')
 
 @section('content')
-    <h3 class="text text-center pb-3 text-uppercase fw-bold">Listes des Familles</h3>
+    <a class="btn btn-primary mb-5" href="{{route('admin.familles.create')}}">Ajouter Une Famille</a>
     @include('admin.inc.success')
     @include('admin.inc.successD')
     <div class="row">
         <div class="col-6">
-            <a class="btn btn-primary btn" href="{{route('admin.familles.create')}}">Ajouter Une Famille</a>
+            <a class="" ></a>
         </div>
     </div>
-    <table  class="table table-hover table-product" style="width:100%">
+    <table  id="myTable" class="display">
         <div class="row">
             <div class="col">
                 <thead class="tableau">
@@ -30,9 +30,9 @@
                             <td>{{ $categorie->updated_at }}</td>
                             <div>
                                 <td>
-                                    <a class="btn btn btn-dark btn-sm"
+                                    <a style="color: black; font-size: 30px; margin-left: 2px;"
                                         href="{{route('admin.familles.show', $categorie->id)}}"><i class="mdi mdi-eye"></i></a>
-                                    <a class="btn btn btn-danger btn-sm"
+                                    <a style="color: red; font-size: 30px; margin-left: 2px;"
                                         href="{{route('admin.familles.delete', $categorie->id)}}"><span class="mdi mdi-delete-circle"></span>
                                     </a>
                                 </td>
@@ -43,4 +43,7 @@
             </div>
         </div>
     </table>
+    {{-- <div class="pagin">
+        {{ $categories->links() }}
+    </div> --}}
 @endsection

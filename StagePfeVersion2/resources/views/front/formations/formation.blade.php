@@ -45,35 +45,7 @@
                         </div>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">SIGNAL</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <form action="{{route('front.signal', $formation->id)}}" method="POST">
-                                        @csrf
-                                        <div class="modal-body">
-                                            Êtes-vous sûr de vouloir signaler cette formation ? Veuillez confirmer en
-                                            répondant
-                                            par "Signaler" et la Raison si vous souhaitez procéder au signalement, ou par
-                                            "Fermer" si vous préférez
-                                            annuler l'action.
-                                            <input class="form-control mt-4" name="raison" placeholder="Votre Raison..">
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Fermer</button>
-                                            <button type="submit" class="tab active">Signaler</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                        
 
                         <!-- Course Image -->
                         <div class="course_image"><img src="images/course_image.jpg" alt=""></div>
@@ -226,5 +198,33 @@
             </div>
         </div>
     </div>
-
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">SIGNAL</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{{route('front.signal', $formation->id)}}" method="POST">
+                @csrf
+                <div class="modal-body">
+                    Êtes-vous sûr de vouloir signaler cette formation ? Veuillez confirmer en
+                    répondant
+                    par "Signaler" et la Raison si vous souhaitez procéder au signalement, ou par
+                    "Fermer" si vous préférez
+                    annuler l'action.
+                    <input class="form-control mt-4" name="raison" placeholder="Votre Raison..">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary"
+                        data-dismiss="modal">Fermer</button>
+                    <button type="submit" class="tab active">Signaler</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 @endsection

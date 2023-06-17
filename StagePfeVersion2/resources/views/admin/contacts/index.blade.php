@@ -1,13 +1,13 @@
 @extends('admin.base')
 
 @section('content')
-    <h3 class="text text-center pb-3 text-uppercase fw-bold">Liste des messages de contact </h3>
+    <h3 class="text text-center pb-3 text-uppercase fw-bold">Liste des messages de contact</h3>
     <div class="row">
         @include('admin.inc.success')
         @include('admin.inc.errors')
         @include('admin.inc.successD')
     </div>
-    <table  class="table table-hover table-product" style="width:100%">
+    <table id="myTable" class="display">
         <div class="row">
             <div class="col">
                 <thead class="tableau">
@@ -30,15 +30,19 @@
                             <td>{{ $contact->created_at }}</td>
                             <div>
                                 <td>
-                                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#exampleModal{{$contact->id}}" style="color: black; font-size: 20px;">
+                                    <button type="button"
+                                        style="color: black; font-size: 30px; margin-left: 2px;"data-toggle="modal"
+                                        data-target="#exampleModal{{ $contact->id }}">
                                         <span class="mdi mdi-message"></span>
                                     </button>
-                                    <a class="btn btn btn-danger"
-                                        href="{{ route('admin.contacts.delete', $contact->id) }}"><span class="mdi mdi-delete-circle"></span></a>
+                                    <a style="color: red; font-size: 30px; margin-left: 2px;"
+                                        href="{{ route('admin.contacts.delete', $contact->id) }}"><span
+                                            class="mdi mdi-delete-circle"></span></a>
                                 </td>
                             </div>
                         </tr>
-                        <div class="modal fade" id="exampleModal{{ $contact->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModal{{ $contact->id }}" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -51,7 +55,8 @@
                                         <textarea class="form-control" id="" cols="30" rows="10" disabled>{{ $contact->message }}</textarea>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Fermer</button>
                                     </div>
                                 </div>
                             </div>

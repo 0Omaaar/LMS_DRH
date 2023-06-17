@@ -33,6 +33,8 @@
     <link href="{{ asset('admin/images/favicon.png') }}" rel="shortcut icon" />
 
     <script src="{{ asset('admin/plugins/nprogress/nprogress.js') }}"></script>
+    {{-- datatabes --}}
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 </head>
 
 
@@ -114,11 +116,6 @@
                                             <span class="nav-text">Liste des familles</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a class="sidenav-item-link" href="">
-                                            <span class="nav-text">dd</span>
-                                        </a>
-                                    </li>
                                 </div>
                             </ul>
                         </li>
@@ -134,11 +131,6 @@
                                     <li>
                                         <a class="sidenav-item-link" href="{{ route('admin.sousfamilles.index') }}">
                                             <span class="nav-text">Liste des sous familles</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="sidenav-item-link" href="">
-                                            <span class="nav-text">Ajouter une sous famille</span>
                                         </a>
                                     </li>
                                 </div>

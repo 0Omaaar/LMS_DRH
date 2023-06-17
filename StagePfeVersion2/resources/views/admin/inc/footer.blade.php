@@ -55,7 +55,10 @@
 <script src="{{ asset('admin/js/chart.js') }}"></script>
 <script src="{{ asset('admin/js/map.js') }}"></script>
 <script src="{{ asset('admin/js/custom.js') }}"></script>
-
+<script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script>
+    let table = new DataTable('#myTable');
+</script>
 </body>
 
 </html>

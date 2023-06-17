@@ -1,15 +1,13 @@
 @extends('admin.base')
 
 @section('content')
-    <h3 class="text text-center pb-3 text-uppercase fw-bold">Listes des Sous Familles</h3>
+    <a class="btn btn-primary mb-5" href="{{ route('admin.sousfamilles.create') }}">Ajouter Une Sous Famille</a>
     @include('admin.inc.success')
     @include('admin.inc.successD')
     <div class="row">
-        <div class="col-6">
-            <a class="btn btn-primary btn" href="{{route('admin.sousfamilles.create')}}">Ajouter Une Sous Famille</a>
-        </div>
+
     </div>
-    <table  class="table table-hover table-product" style="width:100%">
+    <table id="myTable" class="display">
         <div class="row">
             <div class="col">
                 <thead class="tableau">
@@ -34,8 +32,9 @@
                                 <td>
                                     {{-- <a class="btn btn btn-dark btn-sm"
                                         href="{{route('admin.sousfamilles.show', $souscategorie->id)}}"><i class="mdi mdi-eye"></i></a> --}}
-                                    <a class="btn btn btn-danger btn-sm"
-                                        href="{{route('admin.sousfamilles.delete', $souscategorie->id)}}"><span class="mdi mdi-delete-circle"></span>
+                                    <a style="color: red; font-size: 30px; margin-left: 2px;"
+                                        href="{{ route('admin.sousfamilles.delete', $souscategorie->id) }}"><span
+                                            class="mdi mdi-delete-circle"></span>
                                     </a>
                                 </td>
                             </div>

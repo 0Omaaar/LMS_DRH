@@ -1,16 +1,14 @@
 @extends('admin.base')
 
 @section('content')
-    <h3 class="text text-center pb-3 text-uppercase fw-bold mt-2">Liste des Formations</h3>
-    @include('admin.inc.success')
+<a class="btn btn-primary mb-5" href="{{route('admin.formations.create')}}">Ajouter Une formation</a>
+@include('admin.inc.success')
     @include('admin.inc.errors')
     @include('admin.inc.successD')
     <div class="row">
-        <div class="col-6">
-            <a class="btn btn-primary btn" href="{{route('admin.formations.create')}}">Ajouter Une Formation</a>
-        </div>
+       
     </div>
-    <table class="table table-hover table-product" style="width:100%">
+    <table  id="myTable" class="display">
         <div class="row">
             <div class="col">
                 <thead class="tableau">
@@ -31,11 +29,11 @@
                             <td>{{ $formation->updated_at }}</td>
                             <div>
                                 <td>
-                                    <a class="btn btn btn-dark btn-sm"
+                                    <a style="color: black; font-size: 30px; margin-left: 2px;"
                                         href="{{route('admin.formations.show', $formation->id)}}"><i class="mdi mdi-eye"></i></a>
-                                    <a class="btn btn btn-success btn-sm"
+                                    <a style="color: green; font-size: 30px; margin-left: 2px;"
                                         href="{{route('admin.formations.edit', $formation->id)}}"><i class="mdi mdi-pencil-circle"></i></a>
-                                    <a class="btn btn btn-danger btn-sm"
+                                    <a style="color: red; font-size: 30px; margin-left: 2px;"
                                         href="{{route('admin.formations.delete', $formation->id)}}"><span class="mdi mdi-delete-circle"></span>
                                     </a>
                                 </td>
@@ -46,4 +44,5 @@
             </div>
         </div>
     </table>
+
 @endsection

@@ -1,15 +1,13 @@
 @extends('admin.base')
 
 @section('content')
-    <h3 class="text text-center pb-3 text-uppercase fw-bold">Listes des evenements</h3>
-    @include('admin.inc.success')
+<a class="btn btn-primary mb-5" href="{{route('admin.evenements.create')}}">Ajouter Un Evenement</a>
+@include('admin.inc.success')
     @include('admin.inc.successD')
     <div class="row">
-        <div class="col-6">
-            <a class="btn btn-primary btn" href="{{route('admin.evenements.create')}}">Ajouter Un Evenement</a>
-        </div>
+        
     </div>
-    <table  class="table table-hover table-product" style="width:100%">
+    <table  id="myTable" class="display">
         <div class="row">
             <div class="col">
                 <thead class="tableau">

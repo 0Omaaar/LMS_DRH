@@ -3,7 +3,7 @@
 @section('content')
     <h3 class="text text-center pb-3 text-uppercase fw-bold">Listes des Reclamations</h3>
     @include('admin.inc.successD')
-    <table class="table table-hover table-product" style="width:100%">
+    <table  id="myTable" class="display">
         <div class="row">
             <div class="col">
                 <thead class="tableau">

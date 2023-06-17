@@ -5,7 +5,7 @@
     @include('admin.inc.success')
     @include('admin.inc.errors')
     @include('admin.inc.successD')
-    <table class="table table-hover table-product" style="width:100%">
+    <table  id="myTable" class="display">
         <div class="row">
             <div class="col">
                 <thead class="tableau">
