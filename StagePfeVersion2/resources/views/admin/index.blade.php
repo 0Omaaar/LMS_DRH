@@ -28,7 +28,7 @@
                     <div class="card-body">
                         <div class="chart-wrapper">
                             <div>
-                                <div id="spline-area-2"></div>
+                                {{-- <div id="spline-area-2"></div> --}}
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                     <div class="card-body">
                         <div class="chart-wrapper">
                             <div>
-                                <div id="spline-area-3"></div>
+                                {{-- <div id="spline-area-3"></div> --}}
                             </div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                     <div class="card-body">
                         <div class="chart-wrapper">
                             <div>
-                                <div id="spline-area-4"></div>
+                                {{-- <div id="spline-area-4"></div> --}}
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                     <div class="card-body">
                         <div class="chart-wrapper">
                             <div>
-                                <div id="spline-area-1"></div>
+                                {{-- <div id="spline-area-1"></div> --}}
                             </div>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                     <div class="card-body">
                         <div class="chart-wrapper">
                             <div>
-                                <div id="spline-area-7"></div>
+                                {{-- <div id="spline-area-7"></div> --}}
                             </div>
                         </div>
                     </div>
@@ -160,7 +160,7 @@
                     <div class="card-body">
                         <div class="chart-wrapper">
                             <div>
-                                <div id="spline-area-9"></div>
+                                {{-- <div id="spline-area-9"></div> --}}
                             </div>
                         </div>
                     </div>
@@ -186,7 +186,7 @@
                     <div class="card-body">
                         <div class="chart-wrapper">
                             <div>
-                                <div id="spline-area-99"></div>
+                                {{-- <div id="spline-area-99"></div> --}}
                             </div>
                         </div>
                     </div>
@@ -212,7 +212,7 @@
                     <div class="card-body">
                         <div class="chart-wrapper">
                             <div>
-                                <div id="spline-area-99"></div>
+                                {{-- <div id="spline-area-99"></div> --}}
                             </div>
                         </div>
                     </div>

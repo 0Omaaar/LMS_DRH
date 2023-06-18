@@ -116,8 +116,8 @@
                                         style="background-image:url(images/banner_1.jpg)"></div>
                                     <div class="sidebar_banner_overlay"></div>
                                     <div class="sidebar_banner_content">
-                                        <div class="banner_title">Free Book</div>
-                                        <div class="banner_button"><a href="#">download now</a></div>
+                                        <div class="banner_title">GUIDE DRH MEN</div>
+                                        <div class="banner_button"><a href="#">TELECHARGER</a></div>
                                     </div>
                                 </div>
                             </div>
